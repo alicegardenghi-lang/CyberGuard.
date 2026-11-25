@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071a35">
+<title>CyberGuard | Segurança digital</title>
+<style>
+:root{--bg:#06162e;--bg2:#0a2142;--panel:#102b50;--panel2:#15365d;--cyan:#27d7ef;--cyan2:#75efff;--green:#20c997;--white:#f4f8ff;--muted:#a9bdd4;--line:rgba(91,220,242,.25);--danger:#ff7777;--warning:#ffc86b;--shadow:0 18px 50px rgba(0,0,0,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#12345b 0,transparent 30%),var(--bg);color:var(--white);font-family:Inter,Segoe UI,Arial,sans-serif;line-height:1.6}button,input,select,textarea{font:inherit}button,a{ -webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}.container{width:min(1160px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(5,19,40,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1.4px;font-size:1.12rem}.brand-mark{width:39px;height:43px;display:grid;place-items:center;color:var(--cyan);filter:drop-shadow(0 0 8px #27d7ef66)}.brand-mark svg{width:100%;height:100%}.brand span span{color:var(--cyan)}.navlinks{display:flex;align-items:center;gap:22px;color:#d5e4f4;font-size:.92rem}.navlinks a:hover{color:var(--cyan)}.nav-actions{display:flex;gap:9px;align-items:center}.btn{border:1px solid transparent;border-radius:10px;padding:11px 17px;font-weight:750;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.primary{background:linear-gradient(110deg,#16bcd8,#55e5f5);color:#05203a;box-shadow:0 8px 25px #1bcfe533}.secondary{border-color:var(--line);background:#102b50;color:var(--white)}.ghost{background:transparent;border-color:rgba(255,255,255,.18);color:var(--white)}.small{padding:8px 12px;font-size:.88rem}.menu-btn{display:none;background:none;color:white;border:0;font-size:1.5rem}.hero{padding:82px 0 72px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--cyan2);font-size:.82rem;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.05;margin:19px 0 20px;letter-spacing:-2px}h1 em{font-style:normal;color:var(--cyan)}.hero p{color:var(--muted);font-size:1.1rem;max-width:590px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:#b9cce0;font-size:.88rem}.trust span:before{content:"✓";color:var(--green);font-weight:900;margin-right:7px}.hero-art{min-height:390px;position:relative;display:grid;place-items:center}.orb{position:absolute;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,#1dd9ef22,transparent 65%);border:1px solid #43dff133;box-shadow:0 0 90px #13cce622}.shield{width:min(310px,75%);position:relative;filter:drop-shadow(0 0 25px #27d7ef55)}.float-card{position:absolute;background:rgba(13,42,76,.92);border:1px solid var(--line);border-radius:13px;padding:13px 16px;box-shadow:var(--shadow);font-size:.88rem}.float-card strong{display:block;color:var(--cyan);font-size:1.05rem}.fc1{top:45px;right:0}.fc2{bottom:42px;left:0}.section{padding:76px 0}.section.alt{background:linear-gradient(180deg,transparent,rgba(16,43,80,.45),transparent)}.section-head{text-align:center;max-width:720px;margin:0 auto 38px}.section-head h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.15;margin:10px 0}.section-head p{color:var(--muted);margin:0}.grid{display:grid;gap:18px}.services{grid-template-columns:repeat(5,1fr)}.card{background:linear-gradient(145deg,rgba(21,54,93,.92),rgba(11,34,65,.95));border:1px solid var(--line);border-radius:16px;padding:23px;box-shadow:var(--shadow)}.service-card{min-height:220px}.icon{width:45px;height:45px;border-radius:12px;background:#1ed3ec17;border:1px solid #36dff044;display:grid;place-items:center;color:var(--cyan);font-size:1.35rem;margin-bottom:17px}.card h3{margin:0 0 8px;font-size:1.08rem}.card p{color:var(--muted);font-size:.92rem;margin:0}.plans{grid-template-columns:repeat(3,1fr);align-items:stretch}.plan{position:relative}.plan.featured{border-color:var(--cyan);box-shadow:0 0 0 1px #27d7ef44,0 18px 50px #12d1eb15}.popular{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--cyan);color:#06213c;border-radius:20px;padding:4px 13px;font-size:.75rem;font-weight:900;white-space:nowrap}.price{font-size:2.1rem;font-weight:900;margin:12px 0}.price small{font-size:.9rem;color:var(--muted);font-weight:500}.features{list-style:none;padding:0;margin:22px 0;display:grid;gap:11px;color:#d7e5f4;font-size:.92rem}.features li:before{content:"✓";color:var(--cyan);font-weight:900;margin-right:9px}.plan .btn{width:100%}.note{text-align:center;color:var(--muted);font-size:.82rem;margin-top:20px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}.form-card h3{margin-top:0}.field{display:grid;gap:6px;margin:13px 0}.field label{font-size:.88rem;color:#dce9f7;font-weight:650}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border-radius:9px;border:1px solid #477094;background:#071d39;color:white;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #27d7ef1c}.field textarea{min-height:100px;resize:vertical}.field option{background:#0b2343}.muted{color:var(--muted)}.result{display:none;margin-top:18px;padding:17px;border:1px solid var(--line);border-radius:12px;background:#092344}.result.show{display:block}.score{font-size:2.6rem;font-weight:900;color:var(--cyan)}.progress{height:9px;border-radius:9px;background:#1d3b5d;overflow:hidden;margin:10px 0}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--cyan));width:0}.checklist{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:17px 0}.check{padding:12px;border:1px solid var(--line);border-radius:10px;background:#0b2342;display:flex;gap:9px;align-items:flex-start;font-size:.9rem}.check input{accent-color:var(--cyan);margin-top:5px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.tab{border:1px solid var(--line);background:#0b2342;color:#cbdced;padding:9px 14px;border-radius:9px;cursor:pointer}.tab.active{background:#1ac9e2;color:#05213a;border-color:#1ac9e2;font-weight:800}.ticket-list{display:grid;gap:12px}.ticket{display:flex;justify-content:space-between;gap:15px;align-items:center;padding:15px;border-radius:12px;border:1px solid var(--line);background:#0a2342}.ticket small{display:block;color:var(--muted)}.status{font-size:.78rem;border-radius:30px;padding:5px 10px;font-weight:800;white-space:nowrap}.s-recebido{background:#24466b;color:#bfe8ff}.s-analise{background:#594a22;color:#ffdc87}.s-atendimento{background:#174e61;color:#8deaff}.s-resolvido{background:#15523f;color:#8af0c7}.admin-grid{grid-template-columns:repeat(3,1fr);margin-bottom:18px}.stat strong{font-size:1.8rem;color:var(--cyan);display:block}.stat span{color:var(--muted);font-size:.88rem}.table-wrap{overflow:auto}.table{width:100%;border-collapse:collapse;min-width:620px}.table th,.table td{text-align:left;padding:12px;border-bottom:1px solid var(--line);font-size:.88rem}.table th{color:var(--cyan2)}.table select{background:#071d39;color:white;border:1px solid #477094;border-radius:7px;padding:7px}.cta{background:linear-gradient(110deg,#0c4266,#0b2a50);border:1px solid #32d7ed55;border-radius:20px;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:25px}.cta h2{margin:0 0 8px;font-size:2rem}.cta p{margin:0;color:#c1d5e8}.footer{border-top:1px solid var(--line);padding:35px 0;color:var(--muted);font-size:.88rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.hidden{display:none!important}.toast{position:fixed;right:20px;bottom:20px;z-index:60;background:#123b5d;border:1px solid var(--cyan);color:white;padding:14px 18px;border-radius:12px;box-shadow:var(--shadow);max-width:min(380px,90vw);display:none}.toast.show{display:block;animation:rise .25s ease}@keyframes rise{from{transform:translateY(12px);opacity:0}to{transform:translateY(0);opacity:1}}.modal-backdrop{position:fixed;inset:0;background:#020b18cc;z-index:50;display:none;place-items:center;padding:20px}.modal-backdrop.show{display:grid}.modal{width:min(480px,100%);background:#0d294c;border:1px solid var(--line);border-radius:17px;padding:25px;box-shadow:var(--shadow)}.modal-head{display:flex;justify-content:space-between;align-items:center}.close{background:none;border:0;color:white;font-size:1.5rem;cursor:pointer}.demo-tag{font-size:.73rem;letter-spacing:1px;color:var(--warning);font-weight:800}.admin-lock{max-width:520px;margin:auto}.disclaimer{border-left:3px solid var(--warning);padding:10px 13px;background:#ffc86b12;color:#e8d4ad;font-size:.85rem;border-radius:0 8px 8px 0}
+.chat-shell{display:grid;grid-template-columns:280px 1fr;gap:16px;min-height:390px}
+.chat-list{display:grid;gap:9px;align-content:start}
+.chat-person{width:100%;text-align:left;background:#0a2342;color:var(--white);border:1px solid var(--line);border-radius:11px;padding:13px;cursor:pointer}
+.chat-person.active{border-color:var(--cyan);background:#123454}
+.chat-person small{display:block;color:var(--muted);margin-top:3px}
+.chat-main{display:flex;flex-direction:column;min-height:390px;border:1px solid var(--line);border-radius:13px;background:#081e3a;overflow:hidden}
+.chat-head{padding:14px 17px;border-bottom:1px solid var(--line);background:#102b50}
+.chat-messages{padding:16px;display:flex;flex-direction:column;gap:11px;flex:1;min-height:230px;max-height:390px;overflow:auto}
+.chat-bubble{max-width:82%;padding:11px 13px;border-radius:13px;background:#17385d;border:1px solid #3b6686;align-self:flex-start;overflow-wrap:anywhere}
+.chat-bubble.staff{align-self:flex-end;background:#0d4657;border-color:#1b8999}
+.chat-bubble small{display:block;color:#b7cce0;font-size:.72rem;margin-top:5px}
+.chat-compose{display:flex;gap:9px;padding:13px;border-top:1px solid var(--line)}
+.chat-compose input{min-width:0;flex:1;padding:11px 12px;border-radius:9px;border:1px solid #477094;background:#071d39;color:white}
+.chat-empty{color:var(--muted);text-align:center;margin:auto;padding:25px}
+@media(max-width:700px){.chat-shell{grid-template-columns:1fr}.chat-list{grid-template-columns:1fr 1fr}.chat-compose{flex-direction:column}.chat-compose .btn{width:100%}}
+
+@media(max-width:950px){.services{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:310px}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#071a35;padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu-btn{display:block}.nav-actions .secondary{display:none}}
+@media(max-width:700px){.plans,.two-col,.admin-grid{grid-template-columns:1fr}.hero{padding:55px 0}.section{padding:55px 0}.services{grid-template-columns:1fr 1fr}.cta{display:block;padding:26px}.cta .btn{margin-top:20px}.checklist{grid-template-columns:1fr}.ticket{align-items:flex-start;flex-direction:column}.fc1{right:0}.fc2{left:0}}
+@media(max-width:430px){.services{grid-template-columns:1fr}.brand{font-size:.98rem}.hero-actions .btn{width:100%}.float-card{font-size:.78rem;padding:10px}.orb{width:250px;height:250px}}
+
+.recommender{max-width:900px;margin:auto}
+.question-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.question{border:1px solid var(--line);border-radius:13px;padding:18px;background:#0a2342}
+.question h3{font-size:1rem;margin:0 0 12px}
+.answer{display:flex;gap:9px;align-items:flex-start;padding:9px 10px;margin:7px 0;border:1px solid #284968;border-radius:9px;color:#dce9f7;cursor:pointer;font-size:.9rem}
+.answer:has(input:checked){border-color:var(--cyan);background:#1ac9e214}
+.answer input{accent-color:var(--cyan);margin-top:4px}
+.recommendation-reasons{margin:14px 0 18px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#0a2342}.recommendation-reasons ul{margin:9px 0 0;padding-left:20px}.recommendation-reasons li{margin:5px 0;color:var(--muted)}
+.recommendation{display:none;margin-top:20px;padding:22px;border:1px solid var(--cyan);border-radius:14px;background:linear-gradient(135deg,#0c3556,#092344)}
+.recommendation.show{display:block}
+.recommendation h3{color:var(--cyan);font-size:1.4rem;margin:5px 0}
+.recommendation .price{margin:5px 0 12px}
+@media(max-width:700px){.question-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <div class="container nav">
+  <a class="brand" href="#inicio" aria-label="CyberGuard início"><span class="brand-mark"><svg viewBox="0 0 64 72" fill="none"><path d="M32 3 57 13v20c0 17-10 28-25 36C17 61 7 50 7 33V13L32 3Z" stroke="currentColor" stroke-width="4"/><path d="m19 35 9 9 18-21" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>CYBER<span>GUARD</span></span></a>
+  <nav class="navlinks" id="navlinks"><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#planos">Planos</a><a href="#recomendador">Encontre seu plano</a><a href="#diagnostico">Diagnóstico</a><a href="#atendimento">Atendimento</a><a href="#acompanhar">Acompanhar</a></nav>
+  <div class="nav-actions"><button class="btn secondary small" onclick="openAdmin()">Área da equipe</button><a class="btn primary small" href="#atendimento">Solicitar atendimento</a><button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button></div>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="inicio"><div class="container hero-grid">
+ <div><div class="eyebrow"><span class="dot"></span> Segurança digital corporativa</div><h1>Sua empresa protegida. <em>Seu futuro seguro.</em></h1><p>A CyberGuard ajuda empresas a prevenir ameaças digitais, proteger informações e manter seus sistemas funcionando com mais confiança.</p>
+ <div class="hero-actions"><a class="btn primary" href="#diagnostico">Faça um diagnóstico gratuito <span>→</span></a><a class="btn secondary" href="#servicos">Conheça nossos serviços</a></div>
+ <div class="trust"><span>Prevenção inteligente</span><span>Atendimento personalizado</span><span>Proteção corporativa</span></div></div>
+ <div class="hero-art"><div class="orb"></div><svg class="shield" viewBox="0 0 300 340" fill="none"><path d="M150 12 276 58v99c0 83-52 137-126 171C76 294 24 240 24 157V58L150 12Z" fill="#0d3155" stroke="#39e2f5" stroke-width="5"/><path d="M150 37 253 75v82c0 68-41 113-103 145-62-32-103-77-103-145V75l103-38Z" stroke="#68efff" stroke-width="2" opacity=".65"/><path d="m93 166 39 39 78-88" stroke="#35e2f5" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/><path d="M150 12v25M24 58l31 17M276 58l-31 17" stroke="#9af6ff" stroke-width="3"/></svg><div class="float-card fc1"><strong>● Proteção ativa</strong>Monitoramento e prevenção</div><div class="float-card fc2"><strong>+ Segurança</strong>Mais confiança para sua empresa</div></div>
+</div></section>
+
+<section class="section alt" id="servicos"><div class="container"><div class="section-head"><div class="eyebrow">O que fazemos</div><h2>Segurança em todas as etapas</h2><p>Um conjunto de soluções para reduzir riscos, proteger dados e preparar sua equipe.</p></div>
+<div class="grid services">
+ <article class="card service-card"><div class="icon">◈</div><h3>Prevenção</h3><p>Identificação antecipada de riscos e vulnerabilidades.</p></article>
+ <article class="card service-card"><div class="icon">⌕</div><h3>Monitoramento</h3><p>Acompanhamento de alertas e sistemas para identificar atividades incomuns.</p></article>
+ <article class="card service-card"><div class="icon">▣</div><h3>Proteção</h3><p>Medidas de segurança para dados sensíveis e sistemas corporativos.</p></article>
+ <article class="card service-card"><div class="icon">⚑</div><h3>Resposta a incidentes</h3><p>Orientação e apoio diante de situações suspeitas ou incidentes digitais.</p></article>
+ <article class="card service-card"><div class="icon">♧</div><h3>Treinamentos</h3><p>Capacitação de equipes contra golpes e engenharia social.</p></article>
+</div></div></section>
+
+<section class="section" id="planos"><div class="container"><div class="section-head"><div class="eyebrow">Planos de assinatura</div><h2>Proteção que acompanha seu negócio</h2><p>Escolha o nível de acompanhamento mais adequado à realidade da sua empresa.</p></div>
+<div class="grid plans">
+ <article class="card plan"><h3>Cyber Essential</h3><div class="price">R$ 890 <small>/ mês</small></div><p class="muted">Para começar a fortalecer a segurança.</p><ul class="features"><li>Avaliação inicial de segurança</li><li>Orientações de proteção</li><li>Verificação mensal de vulnerabilidades</li><li>Relatório mensal</li></ul><button class="btn secondary" onclick="choosePlan('Cyber Essential')">Tenho interesse</button></article>
+ <article class="card plan featured"><div class="popular">MAIS POPULAR</div><h3>Cyber Professional</h3><div class="price">R$ 1.690 <small>/ mês</small></div><p class="muted">Para empresas que precisam de acompanhamento.</p><ul class="features"><li>Tudo do plano Essential</li><li>Acompanhamento ativo de alertas</li><li>Suporte técnico prioritário</li><li>Treinamentos trimestrais para a equipe</li></ul><button class="btn primary" onclick="choosePlan('Cyber Professional')">Tenho interesse</button></article>
+ <article class="card plan"><h3>Cyber Enterprise</h3><div class="price">R$ 2.990 <small>/ mês</small></div><p class="muted">Para operações com maior demanda de proteção.</p><ul class="features"><li>Tudo do plano Professional</li><li>Revisão diária de alertas</li><li>Análise semanal de vulnerabilidades</li><li>Treinamentos bimestrais</li><li>Reuniões estratégicas</li></ul><button class="btn secondary" onclick="choosePlan('Cyber Enterprise')">Tenho interesse</button></article>
+</div><p class="note">Planos não incluem monitoramento humano 24h. Serviços fora do escopo são orçados separadamente.</p>
+<div class="card" style="margin-top:22px"><h3>Serviços adicionais sob demanda</h3><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(190px,1fr));margin-top:15px">
+ <div><strong>Avaliação completa</strong><div class="muted">A partir de R$ 1.200</div></div><div><strong>Treinamento corporativo</strong><div class="muted">Até 15 funcionários · R$ 900</div></div><div><strong>Consultoria técnica</strong><div class="muted">R$ 250 / hora</div></div><div><strong>Resposta emergencial</strong><div class="muted">A partir de R$ 2.500</div></div><div><strong>Teste de invasão (Pentest)</strong><div class="muted">A partir de R$ 7.000</div></div>
+</div></div></div></section>
+
+
+<section class="section alt" id="recomendador"><div class="container">
+ <div class="section-head"><div class="eyebrow">Encontre seu plano</div><h2>Qual pacote combina com sua empresa?</h2>
+ <p>Responda às perguntas abaixo para receber uma recomendação inicial de acordo com o porte e as necessidades do seu negócio.</p></div>
+ <div class="card recommender">
+  <form id="planQuiz" onsubmit="recommendPlan(event)">
+   <div class="question-grid">
+    <div class="question"><h3>1. Quantas pessoas trabalham na sua empresa?</h3>
+     <label class="answer"><input type="radio" name="size" value="0" required> Até 10 pessoas</label>
+     <label class="answer"><input type="radio" name="size" value="1"> De 11 a 50 pessoas</label>
+     <label class="answer"><input type="radio" name="size" value="2"> Mais de 50 pessoas</label>
+    </div>
+    <div class="question"><h3>2. Como você classificaria os dados utilizados pela empresa?</h3>
+     <label class="answer"><input type="radio" name="data" value="0" required> Poucos dados sensíveis ou informações básicas</label>
+     <label class="answer"><input type="radio" name="data" value="1"> Dados de clientes, fornecedores e funcionários</label>
+     <label class="answer"><input type="radio" name="data" value="2"> Grande volume de dados importantes ou confidenciais</label>
+    </div>
+    <div class="question"><h3>3. Qual nível de acompanhamento de segurança você procura?</h3>
+     <label class="answer"><input type="radio" name="monitor" value="0" required> Orientações e verificações periódicas</label>
+     <label class="answer"><input type="radio" name="monitor" value="1"> Acompanhamento frequente de alertas</label>
+     <label class="answer"><input type="radio" name="monitor" value="2"> Revisões frequentes e acompanhamento estratégico</label>
+    </div>
+    <div class="question"><h3>4. Quando sua empresa precisa de suporte?</h3>
+     <label class="answer"><input type="radio" name="support" value="0" required> Em situações pontuais, sem grande urgência</label>
+     <label class="answer"><input type="radio" name="support" value="1"> Com prioridade quando surgir um problema</label>
+     <label class="answer"><input type="radio" name="support" value="2"> Com alta prioridade e maior proximidade da equipe</label>
+    </div>
+    <div class="question"><h3>5. Qual é a necessidade de treinamento da equipe?</h3>
+     <label class="answer"><input type="radio" name="training" value="0" required> Apenas orientações básicas</label>
+     <label class="answer"><input type="radio" name="training" value="1"> Treinamentos periódicos</label>
+     <label class="answer"><input type="radio" name="training" value="2"> Treinamentos mais frequentes e acompanhamento</label>
+    </div>
+   </div>
+   <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+    <button class="btn primary" type="submit">Ver meu plano recomendado →</button>
+    <button class="btn secondary" type="reset" onclick="document.getElementById('planRecommendation').classList.remove('show')">Limpar respostas</button>
+   </div>
+  </form>
+  <div class="recommendation" id="planRecommendation" aria-live="polite">
+   <div class="eyebrow">Sua recomendação</div><h3 id="recommendedName"></h3>
+   <div class="price" id="recommendedPrice"></div><p id="recommendedReason"></p>
+   <p class="muted" id="recommendedDetails"></p>
+   <div class="recommendation-reasons"><strong>O que pesou na indicação:</strong><ul id="recommendationReasons"></ul></div>
+   <button class="btn primary" type="button" id="recommendedInterest">Tenho interesse neste plano</button>
+  </div>
+  <p class="note" style="text-align:left">A recomendação é uma simulação orientativa baseada nas respostas. Ela não substitui uma avaliação técnica individual e não representa uma auditoria de segurança.</p>
+ </div>
+</div></section>
+
+<section class="section alt" id="diagnostico"><div class="container"><div class="section-head"><div class="eyebrow">Avaliação inicial</div><h2>Como está a segurança da sua empresa?</h2><p>Responda ao checklist e receba uma orientação educativa inicial.</p></div>
+<div class="two-col"><div class="card"><h3>Checklist de segurança</h3><p class="muted">Marque as práticas que sua empresa já utiliza.</p>
+<div class="checklist" id="checks">
+<label class="check"><input type="checkbox"> Utiliza autenticação em duas etapas</label>
+<label class="check"><input type="checkbox"> Realiza backups regularmente</label>
+<label class="check"><input type="checkbox"> Mantém sistemas atualizados</label>
+<label class="check"><input type="checkbox"> Usa proteção antivírus confiável</label>
+<label class="check"><input type="checkbox"> Treina funcionários sobre golpes</label>
+<label class="check"><input type="checkbox"> Controla o acesso a informações</label>
+<label class="check"><input type="checkbox"> Possui política de senhas</label>
+<label class="check"><input type="checkbox"> Tem um plano para incidentes</label>
+</div><button class="btn primary" onclick="runDiagnostic()">Ver resultado do diagnóstico</button>
+<div class="result" id="diagnosticResult" aria-live="polite"></div></div>
+<div class="card"><div class="icon">◎</div><h3>O que este diagnóstico significa?</h3><p class="muted">O resultado é uma simulação educativa baseada nas respostas selecionadas. Ele não realiza varreduras técnicas, não acessa dispositivos e não substitui uma avaliação profissional.</p><div class="disclaimer" style="margin-top:20px">Dica: não informe senhas, dados de clientes, endereços internos ou informações confidenciais neste site demonstrativo.</div></div></div>
+</div></section>
+
+<section class="section" id="atendimento"><div class="container"><div class="section-head"><div class="eyebrow">Estamos aqui para ajudar</div><h2>Solicite um atendimento</h2><p>Conte um pouco sobre sua empresa e sobre o que precisa. Você receberá um protocolo demonstrativo.</p></div>
+<div class="two-col"><form class="card form-card" id="ticketForm"><h3>Novo chamado</h3>
+<div class="field"><label for="company">Empresa *</label><input id="company" required maxlength="70" placeholder="Nome da empresa"></div>
+<div class="field"><label for="contact">Nome do responsável *</label><input id="contact" required maxlength="60" placeholder="Seu nome"></div>
+<div class="field"><label for="email">E-mail para contato *</label><input id="email" type="email" required maxlength="100" placeholder="contato@empresa.com"></div>
+<div class="field"><label for="sector">Setor</label><select id="sector"><option>Administrativo</option><option>Financeiro</option><option>Comercial</option><option>TI</option><option>Educação</option><option>Outro</option></select></div>
+<div class="field"><label for="service">Assunto *</label><select id="service" required><option value="">Selecione</option><option>Prevenção e avaliação</option><option>Monitoramento</option><option>Proteção de dados</option><option>Resposta a incidente</option><option>Treinamento</option><option>Informações sobre planos</option></select></div>
+<div class="field"><label for="urgency">Prioridade</label><select id="urgency"><option>Baixa</option><option selected>Média</option><option>Alta</option></select></div>
+<div class="field"><label for="description">Como podemos ajudar? *</label><textarea id="description" required maxlength="600" placeholder="Descreva brevemente sua necessidade. Não inclua senhas ou dados confidenciais."></textarea></div>
+<div class="disclaimer">Demonstração escolar: os dados ficam somente neste navegador para simular o atendimento. Não envie informações reais ou sensíveis.</div>
+<button class="btn primary" style="width:100%;margin-top:16px" type="submit">Enviar solicitação</button>
+<div class="result" id="newTicketResult" aria-live="polite"></div></form>
+<div class="card"><h3>Atendimento CyberGuard</h3><p class="muted">Nossa equipe organiza as solicitações por prioridade e acompanha cada etapa até a conclusão.</p>
+<div class="grid" style="margin-top:24px"><div class="check"><span class="icon" style="margin:0;flex:none">01</span><div><strong>Recebimento</strong><div class="muted">Sua solicitação recebe um protocolo.</div></div></div><div class="check"><span class="icon" style="margin:0;flex:none">02</span><div><strong>Análise</strong><div class="muted">A equipe avalia o pedido.</div></div></div><div class="check"><span class="icon" style="margin:0;flex:none">03</span><div><strong>Atendimento</strong><div class="muted">O chamado segue para tratamento.</div></div></div><div class="check"><span class="icon" style="margin:0;flex:none">04</span><div><strong>Conclusão</strong><div class="muted">O status é atualizado para resolvido.</div></div></div></div>
+</div></div></div></section>
+
+<section class="section alt" id="acompanhar"><div class="container"><div class="section-head"><div class="eyebrow">Área do cliente</div><h2>Seu espaço de atendimento</h2><p>Acompanhe o chamado e converse diretamente com a equipe CyberGuard.</p></div>
+<div class="two-col"><div class="card"><h3>Acessar minha solicitação</h3><p class="muted">Informe o protocolo recebido e o e-mail cadastrado no pedido.</p>
+<div class="field"><label for="protocolSearch">Número do protocolo</label><input id="protocolSearch" placeholder="Ex.: CG-2026-123456"></div>
+<div class="field"><label for="clientEmail">E-mail cadastrado</label><input id="clientEmail" type="email" placeholder="contato@empresa.com"></div>
+<button class="btn primary" onclick="searchTicket()">Acessar área do cliente</button><div class="result" id="searchResult" aria-live="polite"></div></div>
+<div class="card"><h3>Como funciona o atendimento?</h3><div class="ticket-list"><div class="ticket"><div><strong>1. Solicitação recebida</strong><small>Seu chamado é registrado com um protocolo.</small></div><span class="status s-recebido">01</span></div><div class="ticket"><div><strong>2. Análise da equipe</strong><small>Um funcionário avalia as informações enviadas.</small></div><span class="status s-analise">02</span></div><div class="ticket"><div><strong>3. Conversa pelo chat</strong><small>Você pode responder dúvidas e enviar informações adicionais.</small></div><span class="status s-atendimento">03</span></div><div class="ticket"><div><strong>4. Conclusão</strong><small>A equipe atualiza o status quando finalizar.</small></div><span class="status s-resolvido">04</span></div></div></div></div>
+<div id="clientPortal" class="card hidden" style="margin-top:22px"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap"><div><div class="eyebrow">Canal de comunicação</div><h3 id="clientChatTitle" style="margin:5px 0">Conversa com a CyberGuard</h3><p id="clientChatMeta" class="muted" style="margin:0"></p></div><span id="clientStatus" class="status s-recebido">Recebido</span></div>
+<div class="chat-main" style="margin-top:16px"><div class="chat-head"><strong>Chat de atendimento</strong><div class="muted" style="font-size:.82rem">Envie mensagens e acompanhe as respostas da equipe.</div></div><div id="clientMessages" class="chat-messages"><div class="chat-empty">Nenhuma mensagem ainda.</div></div><form class="chat-compose" onsubmit="sendClientMessage(event)"><input id="clientMessageInput" maxlength="500" required placeholder="Escreva sua mensagem..."><button class="btn primary" type="submit">Enviar</button></form></div>
+<p class="note" style="text-align:left">Demonstração escolar: o chat funciona neste navegador e não envia mensagens reais pela internet. Não compartilhe senhas ou dados confidenciais.</p></div></div></section>
+
+<section class="section" id="contato"><div class="container"><div class="cta"><div><div class="eyebrow">CYBERGUARD</div><h2>Proteja hoje o que mantém seu negócio em movimento.</h2><p>Converse com nossa equipe e descubra o melhor caminho para sua empresa.</p></div><a class="btn primary" href="#atendimento">Falar com a CyberGuard →</a></div></div></section>
+
+<section class="section alt hidden" id="admin"><div class="container"><div class="section-head"><div class="eyebrow">Área restrita · Demonstração</div><h2>Painel da equipe CyberGuard</h2><p>Gerencie os chamados criados nesta demonstração.</p></div>
+<div id="adminLogin" class="card admin-lock"><h3>Acesso da equipe</h3><p class="muted">Para a apresentação, utilize a senha demonstrativa abaixo.</p><div class="field"><label for="adminPassword">Senha de demonstração</label><input id="adminPassword" type="password" placeholder="Digite a senha"></div><button class="btn primary" onclick="loginAdmin()">Entrar no painel</button><p class="note">Senha demonstrativa: <strong>cyber2026</strong></p></div>
+<div id="adminPanel" class="hidden"><div class="grid admin-grid"><div class="card stat"><strong id="statTotal">0</strong><span>Chamados registrados</span></div><div class="card stat"><strong id="statOpen">0</strong><span>Em aberto</span></div><div class="card stat"><strong id="statDone">0</strong><span>Resolvidos</span></div></div><div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><h3>Gerenciamento de chamados</h3><button class="btn ghost small" onclick="logoutAdmin()">Sair do painel</button></div><div class="table-wrap"><table class="table"><thead><tr><th>Protocolo</th><th>Empresa</th><th>Assunto</th><th>Prioridade</th><th>Status</th></tr></thead><tbody id="adminRows"></tbody></table></div><p class="note" style="text-align:left">As alterações são salvas localmente neste navegador. Este painel não possui autenticação ou armazenamento seguro de produção.</p></div>
+<div class="card" style="margin-top:18px"><div class="eyebrow">Central de comunicação</div><h3>Mensagens dos clientes</h3><p class="muted">Selecione um chamado para visualizar a conversa, responder ao cliente ou solicitar mais informações.</p>
+<div class="chat-shell"><div id="staffChatList" class="chat-list"><div class="chat-empty">Nenhum chamado disponível.</div></div><div class="chat-main"><div class="chat-head"><strong id="staffChatTitle">Selecione um chamado</strong><div id="staffChatMeta" class="muted" style="font-size:.82rem">As conversas aparecerão aqui.</div></div><div id="staffMessages" class="chat-messages"><div class="chat-empty">Escolha um cliente na lista ao lado.</div></div><form class="chat-compose" onsubmit="sendStaffMessage(event)"><input id="staffMessageInput" maxlength="500" required placeholder="Digite uma resposta ou pergunta..." disabled><button class="btn primary" id="staffSendBtn" type="submit" disabled>Enviar</button></form></div></div>
+<p class="note" style="text-align:left">As mensagens são demonstrações locais. Em uma versão real, cada funcionário teria login individual e as conversas seriam armazenadas em um servidor seguro.</p></div></div>
+</div></section>
+</main>
+<footer class="footer"><div class="container footer-inner"><div><a class="brand" href="#inicio"><span class="brand-mark">◈</span><span>CYBER<span>GUARD</span></span></a><div style="margin-top:8px">Sua segurança digital, nossa missão implacável.</div></div><div>© 2026 CyberGuard · Projeto demonstrativo de empreendedorismo</div></div></footer>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal-backdrop" id="planModal"><div class="modal"><div class="modal-head"><h3>Interesse em um plano</h3><button class="close" onclick="closePlan()" aria-label="Fechar">×</button></div><p id="selectedPlan" class="muted"></p><p>Preencha a solicitação de atendimento para que a equipe possa apresentar os próximos passos.</p><button class="btn primary" onclick="closePlan();document.querySelector('#atendimento').scrollIntoView({behavior:'smooth'})">Ir para solicitação</button></div></div>
+
+<script>
+const STORAGE_KEY='cyberguard_demo_tickets_v1';
+let tickets=loadTickets();
+function loadTickets(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]')}catch(e){return []}}
+function saveTickets(){localStorage.setItem(STORAGE_KEY,JSON.stringify(tickets))}
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),3500)}
+function makeProtocol(){return 'CG-2026-'+Math.floor(100000+Math.random()*900000)}
+function statusClass(s){return {'Recebido':'s-recebido','Em análise':'s-analise','Em atendimento':'s-atendimento','Resolvido':'s-resolvido'}[s]||'s-recebido'}
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
+document.querySelectorAll('#navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));
+function runDiagnostic(){const checks=[...document.querySelectorAll('#checks input')];const yes=checks.filter(c=>c.checked).length;const score=Math.round(yes/checks.length*100);let title=score>=75?'Boas práticas identificadas':score>=40?'Há pontos que merecem atenção':'Sua empresa pode fortalecer a proteção';let tips=[];if(!checks[0].checked)tips.push('Ative a autenticação em duas etapas sempre que possível.');if(!checks[1].checked)tips.push('Estabeleça uma rotina de backups e teste a restauração.');if(!checks[2].checked)tips.push('Mantenha sistemas e aplicativos atualizados.');if(!checks[4].checked)tips.push('Oriente a equipe a reconhecer mensagens e links suspeitos.');if(!checks[7].checked)tips.push('Defina um procedimento para comunicar e tratar incidentes.');if(!tips.length)tips.push('Continue revisando suas práticas e mantenha os treinamentos em dia.');const box=document.getElementById('diagnosticResult');box.innerHTML=`<div class="score">${score}%</div><strong>${title}</strong><div class="progress"><span style="width:${score}%"></span></div><p class="muted">Você marcou ${yes} de ${checks.length} práticas. Recomendações:</p><ul>${tips.map(t=>'<li>'+escapeHtml(t)+'</li>').join('')}</ul><small class="muted">Resultado educativo e demonstrativo; não representa auditoria técnica.</small>`;box.classList.add('show')}
+function escapeHtml(str){return String(str).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+document.getElementById('ticketForm').addEventListener('submit',e=>{e.preventDefault();const ticket={protocol:makeProtocol(),company:document.getElementById('company').value.trim(),contact:document.getElementById('contact').value.trim(),email:document.getElementById('email').value.trim(),sector:document.getElementById('sector').value,service:document.getElementById('service').value,urgency:document.getElementById('urgency').value,description:document.getElementById('description').value.trim(),status:'Recebido',created:new Date().toLocaleString('pt-BR'),messages:[{from:'CyberGuard',role:'staff',text:'Olá! Recebemos sua solicitação. Nossa equipe irá analisar as informações e, se necessário, entrará em contato por aqui.',time:new Date().toLocaleString('pt-BR')}]};tickets.unshift(ticket);saveTickets();const box=document.getElementById('newTicketResult');box.innerHTML=`<strong>Solicitação registrada!</strong><p>Seu protocolo demonstrativo é:</p><div class="score" style="font-size:1.8rem">${ticket.protocol}</div><p class="muted">Guarde esse número para consultar o andamento na área do cliente.</p><button class="btn secondary small" type="button" onclick="copyProtocol('${ticket.protocol}')">Copiar protocolo</button>`;box.classList.add('show');e.target.reset();renderAdmin();toast('Chamado criado com sucesso!')});
+function copyProtocol(p){if(navigator.clipboard?.writeText){navigator.clipboard.writeText(p).then(()=>toast('Protocolo copiado!')).catch(()=>toast('Protocolo: '+p))}else toast('Protocolo: '+p)}
+let activeClientProtocol=null;
+let activeStaffProtocol=null;
+function searchTicket(){
+ const p=document.getElementById('protocolSearch').value.trim().toUpperCase();
+ const email=document.getElementById('clientEmail').value.trim().toLowerCase();
+ const t=tickets.find(x=>x.protocol.toUpperCase()===p && x.email.toLowerCase()===email);
+ const box=document.getElementById('searchResult');
+ if(!p||!email){box.innerHTML='Informe o protocolo e o e-mail cadastrado.';box.classList.add('show');return}
+ if(!t){box.innerHTML='<strong>Não foi possível localizar o chamado.</strong><p class="muted">Confira o protocolo e o e-mail utilizado no cadastro.</p>';box.classList.add('show');document.getElementById('clientPortal').classList.add('hidden');return}
+ activeClientProtocol=t.protocol;
+ box.innerHTML=`<strong>Solicitação encontrada!</strong><p>${escapeHtml(t.company)} · ${escapeHtml(t.service)}</p><span class="status ${statusClass(t.status)}">${escapeHtml(t.status)}</span><p class="muted">Protocolo: ${escapeHtml(t.protocol)} · Criado em ${escapeHtml(t.created)}</p>`;
+ box.classList.add('show');
+ document.getElementById('clientPortal').classList.remove('hidden');
+ renderClientChat();
+ document.getElementById('clientPortal').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function renderMessages(containerId,messages){
+ const el=document.getElementById(containerId);
+ if(!messages||!messages.length){el.innerHTML='<div class="chat-empty">Nenhuma mensagem ainda.</div>';return}
+ el.innerHTML=messages.map(m=>`<div class="chat-bubble ${m.role==='staff'?'staff':''}"><strong>${escapeHtml(m.from)}</strong><div>${escapeHtml(m.text)}</div><small>${escapeHtml(m.time)}</small></div>`).join('');
+ el.scrollTop=el.scrollHeight;
+}
+function renderClientChat(){
+ const t=tickets.find(x=>x.protocol===activeClientProtocol);if(!t)return;
+ if(!Array.isArray(t.messages))t.messages=[];
+ document.getElementById('clientChatTitle').textContent='Conversa · '+t.protocol;
+ document.getElementById('clientChatMeta').textContent=t.company+' · '+t.service;
+ const status=document.getElementById('clientStatus');status.textContent=t.status;status.className='status '+statusClass(t.status);
+ renderMessages('clientMessages',t.messages);
+}
+function sendClientMessage(e){
+ e.preventDefault();const t=tickets.find(x=>x.protocol===activeClientProtocol);const input=document.getElementById('clientMessageInput');
+ if(!t||!input.value.trim())return;
+ if(!Array.isArray(t.messages))t.messages=[];
+ t.messages.push({from:t.contact,role:'client',text:input.value.trim(),time:new Date().toLocaleString('pt-BR')});
+ input.value='';saveTickets();renderClientChat();renderStaffChats();toast('Mensagem enviada para a equipe (demonstração).');
+}
+function renderStaffChats(){
+ const list=document.getElementById('staffChatList');if(!list)return;
+ if(!tickets.length){list.innerHTML='<div class="chat-empty">Nenhum chamado disponível.</div>';return}
+ list.innerHTML=tickets.map(t=>`<button type="button" class="chat-person ${activeStaffProtocol===t.protocol?'active':''}" onclick="selectStaffChat('${t.protocol}')"><strong>${escapeHtml(t.company)}</strong><small>${escapeHtml(t.protocol)} · ${escapeHtml(t.service)}</small><small>${(t.messages||[]).length} mensagem(ns) · ${escapeHtml(t.status)}</small></button>`).join('');
+ if(activeStaffProtocol&&!tickets.some(t=>t.protocol===activeStaffProtocol))activeStaffProtocol=null;
+ if(!activeStaffProtocol&&tickets.length)activeStaffProtocol=tickets[0].protocol;
+ if(activeStaffProtocol)renderStaffChat();
+}
+function selectStaffChat(protocol){activeStaffProtocol=protocol;renderStaffChats()}
+function renderStaffChat(){
+ const t=tickets.find(x=>x.protocol===activeStaffProtocol);if(!t)return;
+ if(!Array.isArray(t.messages))t.messages=[];
+ document.getElementById('staffChatTitle').textContent=t.company+' · '+t.protocol;
+ document.getElementById('staffChatMeta').textContent=t.contact+' · '+t.email+' · '+t.service;
+ renderMessages('staffMessages',t.messages);
+ document.getElementById('staffMessageInput').disabled=false;
+ document.getElementById('staffSendBtn').disabled=false;
+}
+function sendStaffMessage(e){
+ e.preventDefault();const t=tickets.find(x=>x.protocol===activeStaffProtocol);const input=document.getElementById('staffMessageInput');
+ if(!t||!input.value.trim())return;
+ if(!Array.isArray(t.messages))t.messages=[];
+ t.messages.push({from:'Equipe CyberGuard',role:'staff',text:input.value.trim(),time:new Date().toLocaleString('pt-BR')});
+ input.value='';saveTickets();renderStaffChats();if(activeClientProtocol===t.protocol)renderClientChat();toast('Resposta enviada ao cliente (demonstração).');
+}
+
+function recommendPlan(e){
+ e.preventDefault();
+ const form=document.getElementById('planQuiz');
+ const data=new FormData(form);
+ const answerLabels={
+  size:['Até 10 pessoas','De 11 a 50 pessoas','Mais de 50 pessoas'],
+  data:['Poucos dados sensíveis ou informações básicas','Dados de clientes, fornecedores e funcionários','Grande volume de dados importantes ou confidenciais'],
+  monitor:['Orientações e verificações periódicas','Acompanhamento frequente de alertas','Revisões frequentes e acompanhamento estratégico'],
+  support:['Suporte em situações pontuais','Suporte prioritário quando surgir um problema','Alta prioridade e maior proximidade da equipe'],
+  training:['Orientações básicas','Treinamentos periódicos','Treinamentos frequentes e acompanhamento']
+ };
+ const keys=['size','data','monitor','support','training'];
+ const selected={};
+ keys.forEach(key=>selected[key]=Number(data.get(key)));
+ // Dados, monitoramento e suporte têm peso maior do que o porte isoladamente.
+ const score=selected.size + selected.data*2 + selected.monitor*2 + selected.support*2 + selected.training;
+ let plan,price,reason,details;
+ if(score<=6){
+  plan='Cyber Essential';price='R$ 890 / mês';
+  reason='Pelas respostas, sua empresa tende a se beneficiar de uma estrutura inicial de proteção, com orientações e verificações periódicas.';
+  details='O Essential oferece avaliação inicial, orientações de proteção, verificação mensal de vulnerabilidades e relatório mensal.';
+ }else if(score<=12){
+  plan='Cyber Professional';price='R$ 1.690 / mês';
+  reason='As respostas mostram necessidade de acompanhamento mais próximo, suporte prioritário e ações regulares de conscientização.';
+  details='O Professional inclui tudo do Essential, acompanhamento ativo de alertas, suporte técnico prioritário e treinamentos trimestrais.';
+ }else{
+  plan='Cyber Enterprise';price='R$ 2.990 / mês';
+  reason='O conjunto das respostas indica uma demanda mais alta de proteção, acompanhamento e apoio estratégico para a operação.';
+  details='O Enterprise inclui tudo do Professional, revisão diária de alertas, análise semanal de vulnerabilidades, treinamentos bimestrais e reuniões estratégicas.';
+ }
+ // Uma necessidade crítica de dados somada a monitoramento ou suporte intensivo exige avaliação do nível mais completo.
+ if(selected.data===2 && (selected.monitor===2 || selected.support===2)){
+  plan='Cyber Enterprise';price='R$ 2.990 / mês';
+  reason='Sua empresa lida com um grande volume de informações importantes ou confidenciais e também precisa de acompanhamento ou suporte de alta prioridade. Por isso, o pacote mais completo é o ponto de partida mais adequado.';
+  details='O Enterprise inclui tudo do Professional, revisão diária de alertas, análise semanal de vulnerabilidades, treinamentos bimestrais e reuniões estratégicas.';
+ }
+ const reasons=keys.map(key=>{
+  const labels={size:'Porte da empresa',data:'Tipo de informação',monitor:'Acompanhamento desejado',support:'Necessidade de suporte',training:'Treinamento da equipe'};
+  return labels[key]+': '+answerLabels[key][selected[key]];
+ });
+ document.getElementById('recommendedName').textContent=plan;
+ document.getElementById('recommendedPrice').textContent=price;
+ document.getElementById('recommendedReason').textContent=reason;
+ document.getElementById('recommendedDetails').textContent=details;
+ const reasonsList=document.getElementById('recommendationReasons');
+ reasonsList.replaceChildren(...reasons.map(item=>{const li=document.createElement('li');li.textContent=item;return li;}));
+ document.getElementById('recommendedInterest').onclick=()=>choosePlan(plan);
+ const result=document.getElementById('planRecommendation');
+ result.classList.add('show');
+ result.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function choosePlan(name){document.getElementById('selectedPlan').textContent='Você selecionou: '+name;document.getElementById('planModal').classList.add('show')}
+function closePlan(){document.getElementById('planModal').classList.remove('show')}
+document.getElementById('planModal').addEventListener('click',e=>{if(e.target.id==='planModal')closePlan()});
+function openAdmin(){document.getElementById('admin').classList.remove('hidden');document.getElementById('admin').scrollIntoView({behavior:'smooth'});renderAdmin()}
+function loginAdmin(){if(document.getElementById('adminPassword').value==='cyber2026'){document.getElementById('adminLogin').classList.add('hidden');document.getElementById('adminPanel').classList.remove('hidden');renderAdmin();renderStaffChats();toast('Acesso demonstrativo liberado.')}else toast('Senha incorreta. Confira a senha demonstrativa.')}
+function logoutAdmin(){document.getElementById('adminPanel').classList.add('hidden');document.getElementById('adminLogin').classList.remove('hidden');document.getElementById('adminPassword').value=''}
+function renderAdmin(){const rows=document.getElementById('adminRows');if(!rows)return;document.getElementById('statTotal').textContent=tickets.length;document.getElementById('statDone').textContent=tickets.filter(t=>t.status==='Resolvido').length;document.getElementById('statOpen').textContent=tickets.filter(t=>t.status!=='Resolvido').length;if(!tickets.length){rows.innerHTML='<tr><td colspan="5" class="muted">Nenhum chamado cadastrado. Envie uma solicitação pela página de atendimento.</td></tr>';renderStaffChats();return}rows.innerHTML=tickets.map((t,i)=>`<tr><td><strong>${escapeHtml(t.protocol)}</strong><br><small class="muted">${escapeHtml(t.created)}</small></td><td>${escapeHtml(t.company)}</td><td>${escapeHtml(t.service)}</td><td>${escapeHtml(t.urgency)}</td><td><select aria-label="Status do chamado ${escapeHtml(t.protocol)}" onchange="changeStatus(${i},this.value)">${['Recebido','Em análise','Em atendimento','Resolvido'].map(s=>`<option ${t.status===s?'selected':''}>${s}</option>`).join('')}</select></td></tr>`).join('');renderStaffChats()}
+function changeStatus(i,status){tickets[i].status=status;saveTickets();renderAdmin();if(activeClientProtocol===tickets[i].protocol)renderClientChat();toast('Status atualizado para: '+status)}
+</script>
+</body>
+</html>
